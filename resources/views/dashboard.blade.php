@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-        <h1>Hello world !</h1>
-        <h2>Page d'accueil</h2>
+    <div id="app"></div>
+
+    <!-- Inclure le fichier JavaScript compilé -->
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
+
 </html>
