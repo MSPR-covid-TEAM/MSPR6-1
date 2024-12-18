@@ -12,10 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pays', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom');
-            $table->bigInteger('population');
-            $table->float('superficie');
+            $table->id('id_pays');
+            $table->string('nom_pays', 100);
+            $table->char('code_iso', 3);
+            $table->integer('population')->nullable();
+            $table->integer('dimension')->nullable();
+            $table->unique('code_iso');
+            $table->primary('id_pays');
             $table->timestamps();
         });
     }

@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pandemies', function (Blueprint $table) {
-            $table->id();
-            $table->string('nom');
-            $table->text('description')->nullable();
+        Schema::create('pandemie', function (Blueprint $table) {
+            $table->id('id_pandemie');
+            $table->string('nom_pandemie', 100);
+            $table->string('virus', 100);
             $table->date('date_debut');
             $table->date('date_fin')->nullable();
-            $table->string('statut');
+            $table->text('description')->nullable();
+            $table->primary('id_pandemie');
             $table->timestamps();
         });
     }
