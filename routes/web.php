@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\StatsPandemieController;
 use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\Route;
 
