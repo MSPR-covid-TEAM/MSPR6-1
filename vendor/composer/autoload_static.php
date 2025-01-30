@@ -334,8 +334,8 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -509,7 +509,16 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
     );
 
     public static $classMap = array (
+        'App\\Http\\Controllers\\Api\\StatsPandemieController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/StatsPandemieController.php',
+        'App\\Http\\Controllers\\ChartController' => __DIR__ . '/../..' . '/app/Http/Controllers/ChartController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\dashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/dashboardController.php',
+        'App\\Http\\Repositories\\ChartRepository' => __DIR__ . '/../..' . '/app/Http/Repositories/ChartRepository.php',
+        'App\\Models\\DonneesEpidemiologiques' => __DIR__ . '/../..' . '/app/Models/DonneesEpidemiologiques.php',
+        'App\\Models\\Pandemie' => __DIR__ . '/../..' . '/app/Models/Pandemie.php',
+        'App\\Models\\Pays' => __DIR__ . '/../..' . '/app/Models/Pays.php',
+        'App\\Models\\Source' => __DIR__ . '/../..' . '/app/Models/Source.php',
+        'App\\Models\\StatsPandemie' => __DIR__ . '/../..' . '/app/Models/StatsPandemie.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
