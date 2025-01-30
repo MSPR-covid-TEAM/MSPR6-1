@@ -13,7 +13,7 @@ class ChartRepository
     public function __construct(StatsPandemie $statsPandemie) {
         $this->statsPandemie = $statsPandemie;
     }
-    
+
     public function statsPandemie($countryId = null, $typeId = null, $startDate = null, $endDate = null)
     {
         return $this->statsPandemie

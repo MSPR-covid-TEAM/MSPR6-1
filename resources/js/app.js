@@ -1,15 +1,16 @@
-// Importer Vue et le composant principal
 import { createApp } from 'vue';
-import App from './components/App.vue';
+import App from './App.vue';
 import axios from 'axios';
+import router from './router/index.js';
+import Bienvenue from './components/GraphData.vue';
+import HighchartsVue from 'highcharts-vue';
 
-// Créer l'instance de Vue et monter l'application
 const app = createApp(App);
 
-// Ajouter Axios globalement
+app.use(router);
+app.use(HighchartsVue);
+
 app.config.globalProperties.$axios = axios;
+app.component('Bienvenue', Bienvenue);
 
-// Monter l'application Vue sur l'élément avec l'ID "app"
 app.mount('#app');
-
-//app.component('hello-world', HelloWorld); // Enregistrer le composant globalement

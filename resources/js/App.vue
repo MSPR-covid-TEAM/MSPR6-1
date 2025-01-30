@@ -1,17 +1,18 @@
 <template>
-    <div id="app">
-      <h1>Bienvenue dans Vue.js avec Laravel !</h1>
+    <div>
+      <Bienvenue />
     </div>
   </template>
 
   <script>
+  import Bienvenue from './components/GraphData.vue';
+
   export default {
     name: 'App',
+    components: {
+      Bienvenue,
+
+    },
   };
   </script>
 
-  <style scoped>
-  h1 {
-    color: #42b983;
-  }
-  </style>
