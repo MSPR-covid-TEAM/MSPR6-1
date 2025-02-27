@@ -267,6 +267,7 @@ select, input {
     background-color: #0056b3;
 }
 
+
 /* 📊 Graphique en pleine largeur */
 .chart-container {
     width: 100%;
