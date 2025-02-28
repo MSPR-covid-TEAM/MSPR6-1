@@ -17,10 +17,10 @@ class ChartController extends Controller
     }
 
     public function statsPandemie(Request $request)
-    {
+    {   
         $startDate = (isset($request['startDate']) && !empty($request['startDate'])) ? $request['startDate'] : null;
         $endDate = (isset($request['endDate']) && !empty($request['endDate'])) ? $request['endDate'] : null;
-        $countryId = (isset($request['countryId']) && !empty($request['countryId'])) ? $request['endcountryIdDate'] : null;
+        $countryId = (isset($request['countryId']) && !empty($request['countryId'])) ? $request['countryId'] : null;
         $typeId = (isset($request['typeId']) && !empty($request['typeId'])) ? $request['typeId'] : null;
 
         return $this->chartRepository->statsPandemie($countryId, $typeId, $startDate, $endDate);
