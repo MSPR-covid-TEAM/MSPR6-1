@@ -21,4 +21,9 @@ Route::get('/pandemie', function () {
     return response()->json(Pandemie::all());
 });
 
-Route::post('/stats', [ChartController::class, 'statsPandemie']);
+// API routes for /stats
+Route::post('/stats', [ChartController::class, 'statsPandemie']); // Create
+Route::get('/stats', [ChartController::class, 'getStatsPandemie']); // Read all
+Route::get('/stats/{id}', [ChartController::class, 'getStatsPandemieById']); // Read one
+Route::put('/stats/{id}', [ChartController::class, 'updateStatsPandemie']); // Update
+Route::delete('/stats/{id}', [ChartController::class, 'destroyStatsPandemie']); // Delete

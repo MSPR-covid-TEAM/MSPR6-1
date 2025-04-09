@@ -39,7 +39,9 @@ class VerifyCsrfToken
      *
      * @var array<int, string>
      */
-    protected $except = [];
+    protected $except = [
+        'stats/*', // Désactive la protection CSRF pour toutes les routes commençant par "stats/"
+    ];
 
     /**
      * The globally ignored URIs that should be excluded from CSRF verification.
