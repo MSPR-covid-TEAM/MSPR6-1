@@ -27,3 +27,4 @@ Route::get('/stats', [ChartController::class, 'getStatsPandemie']); // Read all
 Route::get('/stats/{id}', [ChartController::class, 'getStatsPandemieById']); // Read one
 Route::put('/stats/{id}', [ChartController::class, 'updateStatsPandemie']); // Update
 Route::delete('/stats/{id}', [ChartController::class, 'destroyStatsPandemie']); // Delete
+Route::post('/stats/create', [ChartController::class, 'createStats']); // Create a new stat
