@@ -6,30 +6,27 @@
         <div class="filters">
             <div class="filter-group">
                 <label for="country">Sélectionner un pays :</label>
-                <select ref="countrySelect" id="country" v-model="selectedCountry">
+                <select ref="countrySelect" id="country" v-model="tempSelectedCountry">
                     <option v-for="country in countries" :key="country.id_pays" :value="country.id_pays">
                         {{ country.nom_pays }}
                     </option>
                 </select>
             </div>
-
             <div class="filter-group">
                 <label for="pandemic">Sélectionner une pandémie :</label>
-                <select ref="pandemicSelect" id="pandemic" v-model="selectedPandemic">
+                <select ref="pandemicSelect" id="pandemic" v-model="tempSelectedPandemic">
                     <option v-for="pandemic in pandemies" :key="pandemic.id_pandemie" :value="pandemic.id_pandemie">
                         {{ pandemic.nom_pandemie }}
                     </option>
                 </select>
             </div>
-
             <div class="filter-group">
                 <label for="startDate">Date de début :</label>
-                <input type="date" id="startDate" v-model="startDate">
+                <input type="date" id="startDate" v-model="tempStartDate">
             </div>
-
             <div class="filter-group">
                 <label for="endDate">Date de fin :</label>
-                <input type="date" id="endDate" v-model="endDate">
+                <input type="date" id="endDate" v-model="tempEndDate">
             </div>
         </div>
 
