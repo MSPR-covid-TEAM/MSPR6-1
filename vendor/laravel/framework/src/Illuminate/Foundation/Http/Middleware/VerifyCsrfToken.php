@@ -40,7 +40,7 @@ class VerifyCsrfToken
      * @var array<int, string>
      */
     protected $except = [
-        'stats/*', // Désactive la protection CSRF pour toutes les routes commençant par "stats/"
+        'stats/*', 'stats', // Désactive la protection CSRF pour toutes les routes commençant par "stats/"
     ];
 
     /**

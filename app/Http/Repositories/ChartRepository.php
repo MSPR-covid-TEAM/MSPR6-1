@@ -17,7 +17,6 @@ class ChartRepository
 
     public function statsPandemie($countryId = null, $typeId = null, $startDate = null, $endDate = null)
     {
-        // dd("test");
         $query = $this->statsPandemie
             ->join('pays', 'stat_pandemie.id_pays', '=', 'pays.id_pays')
             ->join('pandemie', 'stat_pandemie.id_pandemie', '=', 'pandemie.id_pandemie')
@@ -32,8 +31,7 @@ class ChartRepository
                 'pays.nom_pays',
                 'stat_pandemie.date'
             );
-            // dd($query->get());
-        if (isset($countryId)) {
+         if (isset($countryId)) {
             $query->where('stat_pandemie.id_pays', $countryId);
         }
 
