@@ -22,7 +22,7 @@ Route::get('/pandemie', function () {
 });
 
 // API routes for /stats
-Route::post('/stats', [ChartController::class, 'statsPandemie']); // Create
+Route::post('/stats', [ChartController::class, 'statsPandemie']); // Stats
 Route::get('/stats', [ChartController::class, 'getStatsPandemie']); // Read all
 Route::get('/stats/{id}', [ChartController::class, 'getStatsPandemieById']); // Read one
 Route::put('/stats/{id}', [ChartController::class, 'updateStatsPandemie']); // Update
